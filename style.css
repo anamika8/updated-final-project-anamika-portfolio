@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: "Roboto", "Montserrat", sans-serif;
+    font-size: 16px;
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23252e;
+    --bg-secondary: #141418;
+    --black: #080808;
+    --white: #ffffff;
+    --blue: #6649b8;
+}
+
+body {
+    color: var(--black);
+    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--black);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--blue);
+}
+
+main {
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+.navbar {
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--bg-primary);
+}
