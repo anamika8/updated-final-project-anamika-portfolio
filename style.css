@@ -1,255 +1,287 @@
-* {
-    box-sizing: border-box;
-}
-
-:root {
-    font-family: "Roboto", "Montserrat", sans-serif;
-    font-size: 16px;
-    --text-primary: #576e75;
-    --text-secondary: #35535c;
-    --bg-primary: #fdf6e3;
-    --bg-secondary: #f5e5b8;
-    --black: #080808;
-    --white: #ffffff;
-    --blue: #6649b8;
-    --pink: #df49a6;
-    --transition-speed: 600ms;
-}
-
-.home-container {
-    background: url(img/bkp_original.jpg) no-repeat center center;
-    background-size: cover;
-    background-position-x: right;
-    color: var(--black);
-    height: 100vh;
-}
-
-body {
-    color: var(--black);
-    background-color: var(--white);
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-body::-webkit-scrollbar {
-    width: 0.25rem;
-}
-
-body::-webkit-scrollbar-track {
-    background: var(--black);
-}
-
-body::-webkit-scrollbar-thumb {
-    background: var(--blue);
-}
-
-main {
-    margin-left: 5rem;
-    padding: 1rem;
-}
-
-.navbar {
-    position: fixed;
-    background-color: var(--bg-primary);
-    transition: width 600ms ease;
-    overflow: scroll;
-    list-style: none;
-}
-
-.navbar-nav {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 45%;
-}
-
-.nav-item {
-    width: 100%;
-}
-
-.nav-item:last-child {
-    margin-top: auto;
-}
-
-.nav-link {
-    display: flex;
-    align-items: center;
-    height: 5rem;
-    color: var(--text-primary);
-    text-decoration: none;
-    filter: grayscale(100%) opacity(0.7);
-    transition: var(--transition-speed);
-}
-
-.nav-link:hover {
-    filter: grayscale(0%) opacity(1);
-    background: var(--bg-secondary);
-    color: var(--text-secondary);
-}
-
-.link-text {
-    display: none;
-    margin-left: 1rem;
-    font-size: 1.5rem;
-}
-
-.nav-link .fa-solid {
-    width: 2rem;
-    min-width: 2rem;
-    margin: 0 1.5rem;
-}
-
-.logo {
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    text-align: center;
-    color: var(--text-secondary);
-    background: var(--bg-secondary);
-    font-size: 1.5rem;
-    letter-spacing: 0.3ch;
-    width: 100%;
-}
-
-.logo .fa-solid {
-    transform: rotate(0deg);
-    transition: var(--transition-speed);
-}
-
-.logo-text {
-    display: inline;
-    position: absolute;
-    left: -999px;
-    transition: var(--transition-speed);
-}
-
-.fa-solid {
-    color: var(--pink);
-}
-
-.fa-solid {
-    transition: var(--transition-speed);
-}
-
-.navbar:hover .logo .fa-solid {
-    transform: rotate(-180deg);
-}
-
-#intro .name {
-    font-weight: 900;
-    font-size: 2.5em;
-    text-transform: uppercase;
-    letter-spacing: 0.5em;
-    overflow: hidden;
-}
-
-#intro .tagline,
-#intro .more-info {
-    font-weight: 900;
-    font-size: 1.3em;
-    padding: 2%;
-    /*text-shadow: 0 8px 8px white;*/
-}
-
-.ml16 {
-    color: #402d2d;
-    padding: 40px 0;
-    font-weight: 800;
-    font-size: 2em;
-    letter-spacing: 0.5em;
-    overflow: hidden;
-}
-
-.ml16 .letter {
-    display: inline-block;
-    line-height: 1em;
-}
-
-
-/* Small screens */
-
-@media only screen and (max-width: 800px) {
+    * {
+        box-sizing: border-box;
+    }
+    
+     :root {
+        font-family: "Roboto", "Montserrat", sans-serif;
+        font-size: 16px;
+        --text-primary: #576e75;
+        --text-secondary: #35535c;
+        --bg-primary: #fdf6e3;
+        --bg-secondary: #f5e5b8;
+        --black: #080808;
+        --white: #ffffff;
+        --blue: #6649b8;
+        --pink: #df49a6;
+        --transition-speed: 600ms;
+    }
+    
     .home-container {
-        background: url(img/bkp_small.jpg);
-        background-repeat: no-repeat;
-        background-position-x: right;
-        display: block;
+        background: url(img/bkp_original.jpg) no-repeat center center;
         background-size: cover;
-        justify-content: center;
-    }
-    .navbar {
-        bottom: 0;
-        width: 100vw;
-        height: 5rem;
-    }
-    .logo {
-        display: none;
-    }
-    .navbar-nav {
-        flex-direction: row;
-        height: 100%;
-    }
-    .nav-link {
-        justify-content: center;
-    }
-    main {
-        margin: 0;
-    }
-}
-
-
-/* Large screens */
-
-@media only screen and (min-width: 800px) {
-    .navbar {
-        top: 0;
-        width: 5rem;
+        background-position-x: right;
+        color: var(--black);
         height: 100vh;
     }
-    .navbar:hover {
-        width: 16rem;
-    }
-    .navbar:hover .link-text {
-        display: inline;
-    }
-    .navbar:hover .logo .fa-solid {
-        margin-left: 11rem;
-    }
-    .navbar:hover .logo-text {
-        left: 0px;
-    }
-    .home-container {
-        background: url(img/bkp_original.jpg);
-        background-repeat: no-repeat;
-        background-position-x: right;
-        background-position-y: bottom;
-        background-size: cover;
-    }
-    #intro .name {
-        margin-top: 2em;
-        position: relative;
-        left: 4%;
-    }
-    #intro h2 {
-        position: relative;
-        left: 5%;
-    }
-    #intro .tagline {
-        position: relative;
-        max-width: 110vh;
-        left: 22%;
-        font-size: 1.4em;
-    }
-    #intro .more-info {
-        position: relative;
-        left: 5%;
-        font-size: 1.4em;
-    }
-    main {
+    
+    body {
+        color: var(--black);
+        background-color: var(--white);
+        text-align: center;
         margin: 0;
+        padding: 0;
     }
-}
+    
+    body::-webkit-scrollbar {
+        width: 0.25rem;
+    }
+    
+    body::-webkit-scrollbar-track {
+        background: var(--black);
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        background: var(--blue);
+    }
+    
+    main {
+        margin-left: 5rem;
+        padding: 1rem;
+    }
+    
+    .navbar {
+        position: fixed;
+        background-color: var(--bg-primary);
+        transition: width 600ms ease;
+        overflow: scroll;
+        list-style: none;
+    }
+    
+    .navbar-nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 45%;
+    }
+    
+    .nav-item {
+        width: 100%;
+    }
+    
+    .nav-item:last-child {
+        margin-top: auto;
+    }
+    
+    .nav-link {
+        display: flex;
+        align-items: center;
+        height: 5rem;
+        color: var(--text-primary);
+        text-decoration: none;
+        filter: grayscale(100%) opacity(0.7);
+        transition: var(--transition-speed);
+    }
+    
+    .nav-link:hover {
+        filter: grayscale(0%) opacity(1);
+        background: var(--bg-secondary);
+        color: var(--text-secondary);
+    }
+    
+    .link-text {
+        display: none;
+        margin-left: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .nav-link .fa-solid {
+        width: 2rem;
+        min-width: 2rem;
+        margin: 0 1.5rem;
+    }
+    
+    .logo {
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: var(--text-secondary);
+        background: var(--bg-secondary);
+        font-size: 1.5rem;
+        letter-spacing: 0.3ch;
+        width: 100%;
+    }
+    
+    .logo .fa-solid {
+        transform: rotate(0deg);
+        transition: var(--transition-speed);
+    }
+    
+    .logo-text {
+        display: inline;
+        position: absolute;
+        left: -999px;
+        transition: var(--transition-speed);
+    }
+    
+    .fa-solid {
+        color: var(--pink);
+    }
+    
+    .fa-solid {
+        transition: var(--transition-speed);
+    }
+    
+    .navbar:hover .logo .fa-solid {
+        transform: rotate(-180deg);
+    }
+    
+    #intro .name {
+        font-weight: 900;
+        font-size: 2.5em;
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+        overflow: hidden;
+    }
+    
+    #intro .tagline,
+    #intro .more-info {
+        font-weight: 900;
+        font-size: 1.3em;
+        padding: 2%;
+        /*text-shadow: 0 8px 8px white;*/
+    }
+    
+    .ml16 {
+        color: #402d2d;
+        padding: 40px 0;
+        font-weight: 800;
+        font-size: 2em;
+        letter-spacing: 0.5em;
+        overflow: hidden;
+    }
+    
+    .ml16 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+    /* Small screens */
+    
+    @media (max-width: 414px) {
+        .navbar {
+            bottom: 0;
+            width: 100vw;
+            height: 5rem;
+        }
+        .logo {
+            display: none;
+        }
+        .navbar-nav {
+            flex-direction: row;
+            height: 100%;
+        }
+        .nav-link {
+            justify-content: center;
+        }
+        #intro .name {
+            font-size: 2.2em;
+        }
+        main {
+            margin-left: 5%;
+        }
+        .ml16 {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #intro .tagline {
+            font-size: 1.3em;
+        }
+        #intro .more-info {
+            font-size: 1.2em;
+        }
+    }
+    
+    @media (min-width: 415px) and (max-width: 800px) {
+        .home-container {
+            background: url(img/bkp_small.jpg);
+            background-repeat: no-repeat;
+            background-position-x: right;
+            display: block;
+            background-size: cover;
+            justify-content: center;
+        }
+        .navbar {
+            bottom: 0;
+            width: 100vw;
+            height: 5rem;
+        }
+        .logo {
+            display: none;
+        }
+        .navbar-nav {
+            flex-direction: row;
+            height: 100%;
+        }
+        .nav-link {
+            justify-content: center;
+        }
+        main {
+            margin: 0;
+        }
+    }
+    /* Large screens */
+    
+    @media (min-width: 800px) {
+        .navbar {
+            top: 0;
+            width: 5rem;
+            height: 100vh;
+        }
+        .navbar:hover {
+            width: 16rem;
+        }
+        .navbar:hover .link-text {
+            display: inline;
+        }
+        .navbar:hover .logo .fa-solid {
+            margin-left: 11rem;
+        }
+        .navbar:hover .logo-text {
+            left: 0px;
+        }
+        .home-container {
+            background: url(img/bkp_original.jpg);
+            background-repeat: no-repeat;
+            background-position-x: right;
+            background-position-y: bottom;
+            background-size: cover;
+        }
+        #intro .name {
+            margin-top: 2em;
+            position: relative;
+            left: 5%;
+        }
+        #intro h2 {
+            position: relative;
+            left: 5%;
+        }
+        #intro .tagline {
+            position: relative;
+            max-width: 110vh;
+            left: 22%;
+            font-size: 1.4em;
+        }
+        #intro .more-info {
+            position: relative;
+            left: 5%;
+            font-size: 1.4em;
+        }
+        main {
+            margin: 0;
+        }
+    }
