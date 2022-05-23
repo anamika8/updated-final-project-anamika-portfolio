@@ -150,9 +150,9 @@ main {
 #intro .tagline,
 #intro .more-info {
     font-weight: 900;
-    font-size: 23px;
+    font-size: 1.3em;
     padding: 2%;
-    text-shadow: 0 8px 8px white;
+    /*text-shadow: 0 8px 8px white;*/
 }
 
 .ml16 {
@@ -228,5 +228,28 @@ main {
         background-position-x: right;
         background-position-y: bottom;
         background-size: cover;
+    }
+    #intro .name {
+        margin-top: 2em;
+        position: relative;
+        left: 4%;
+    }
+    #intro h2 {
+        position: relative;
+        left: 5%;
+    }
+    #intro .tagline {
+        position: relative;
+        max-width: 110vh;
+        left: 22%;
+        font-size: 1.4em;
+    }
+    #intro .more-info {
+        position: relative;
+        left: 5%;
+        font-size: 1.4em;
+    }
+    main {
+        margin: 0;
     }
 }
