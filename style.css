@@ -16,6 +16,14 @@
     --transition-speed: 600ms;
 }
 
+.home-container {
+    background: url(img/bkp_original.jpg) no-repeat center center;
+    background-size: cover;
+    background-position-x: right;
+    color: var(--black);
+    height: 100vh;
+}
+
 body {
     color: var(--black);
     background-color: var(--white);
@@ -39,12 +47,6 @@ body::-webkit-scrollbar-thumb {
 main {
     margin-left: 5rem;
     padding: 1rem;
-}
-
-.navbar-nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 .navbar {
@@ -171,6 +173,14 @@ main {
 /* Small screens */
 
 @media only screen and (max-width: 800px) {
+    .home-container {
+        background: url(img/bkp_small.jpg);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        display: block;
+        background-size: cover;
+        justify-content: center;
+    }
     .navbar {
         bottom: 0;
         width: 100vw;
@@ -211,5 +221,12 @@ main {
     }
     .navbar:hover .logo-text {
         left: 0px;
+    }
+    .home-container {
+        background: url(img/bkp_original.jpg);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: bottom;
+        background-size: cover;
     }
 }
