@@ -273,7 +273,7 @@
         }
         #intro .tagline {
             position: relative;
-            max-width: 200vh;
+            max-width: 90vw;
             left: 7%;
             font-size: 1.4em;
         }
