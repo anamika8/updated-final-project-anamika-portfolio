@@ -55,6 +55,7 @@
         transition: width 600ms ease;
         overflow: scroll;
         list-style: none;
+        z-index: 100;
     }
     
     .navbar-nav {
@@ -272,8 +273,8 @@
         }
         #intro .tagline {
             position: relative;
-            max-width: 110vh;
-            left: 22%;
+            max-width: 200vh;
+            left: 7%;
             font-size: 1.4em;
         }
         #intro .more-info {
