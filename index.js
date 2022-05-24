@@ -2,6 +2,9 @@
 var textWrapper = document.querySelector('.ml16');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
+// Get all sections
+var allSections = document.querySelectorAll("section");
+
 anime.timeline({ loop: true })
     .add({
         targets: '.ml16 .letter',
@@ -16,3 +19,14 @@ anime.timeline({ loop: true })
         easing: "easeOutExpo",
         delay: 1000
     });
+
+// Utility method to toggle display when switching between sections
+const switchSection = (sectionId) => {
+    allSections.forEach((section) => {
+        if (section.id === sectionId) {
+            section.style.display = "block";
+        } else if (section.style.display === "block") {
+            section.style.display = "none";
+        }
+    });
+};

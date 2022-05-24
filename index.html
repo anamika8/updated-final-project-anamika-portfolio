@@ -24,26 +24,26 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link" onclick="switchSection('intro')">
                         <i class="fa-solid fa-house fa-sm fa-lg	fa-xl"></i>
                         <span class="link-text">Home</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link" onclick="switchSection('about')">
                         <i class="fa-solid fa-user fa-sm fa-lg fa-xl"></i>
                         <span class="link-text">About Me</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link" onclick="switchSection('project')">
                         <i class="fa-solid fa-laptop-code fa-sm fa-lg fa-xl"></i>
                         <span class="link-text">Projects</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link" onclick="switchSection('work')">
                         <i class="fa-solid fa-briefcase fa-sm fa-lg fa-xl"></i>
                         <span class="link-text">Work</span>
                     </a>
@@ -56,7 +56,7 @@
                     </a>
                 </li>-->
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link" onclick="switchSection('contact')">
                         <i class="fa-solid fa-envelope fa-sm fa-lg fa-xl"></i>
                         <span class="link-text">Contact</span>
                     </a>
@@ -65,8 +65,7 @@
             </ul>
         </nav>
         <main role="main">
-            <header id="intro" role="banner">
-
+            <section id="intro" role="banner" style="display: block;">
                 <h1 class="name">Anamika Nayak</h1>
                 <h2 class="ml16">Aspiring Graduate</h2>
                 <div class="tagline">
@@ -75,8 +74,26 @@
                 <p class="more-info">
                     Pursuing Masters' in Computer Science from Portland State
                 </p>
-            </header>
+            </section>
+            <section id="about" style="display: none;">
+                <h1>About me</h1>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo error quidem, fuga neque dignissimos amet molestiae quae sunt, quos deleniti architecto, minus totam doloremque eaque omnis voluptates suscipit eos! Quibusdam?</p>
+            </section>
 
+            <section id="project" style="display: none;">
+                <h1>Projects</h1>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo error quidem, fuga neque dignissimos amet molestiae quae sunt, quos deleniti architecto, minus totam doloremque eaque omnis voluptates suscipit eos! Quibusdam?</p>
+            </section>
+
+            <section id="work" style="display: none;">
+                <h1>Work</h1>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo error quidem, fuga neque dignissimos amet molestiae quae sunt, quos deleniti architecto, minus totam doloremque eaque omnis voluptates suscipit eos! Quibusdam?</p>
+            </section>
+
+            <section id="contact" style="display: none;">
+                <h1>Contact</h1>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo error quidem, fuga neque dignissimos amet molestiae quae sunt, quos deleniti architecto, minus totam doloremque eaque omnis voluptates suscipit eos! Quibusdam?</p>
+            </section>
         </main>
     </div>
     <script type="text/javascript" src="index.js"></script>
