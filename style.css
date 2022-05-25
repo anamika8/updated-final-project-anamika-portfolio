@@ -3,7 +3,7 @@
     }
     
      :root {
-        font-family: "Roboto", "Montserrat", sans-serif;
+        font-family: 'IBM Plex Sans Thai Looped', sans-serif;
         font-size: 16px;
         --text-primary: #576e75;
         --text-secondary: #35535c;
@@ -141,7 +141,7 @@
     }
     
     #intro .name {
-        font-weight: 900;
+        font-weight: 700;
         font-size: 2.5em;
         text-transform: uppercase;
         letter-spacing: 0.5em;
@@ -150,7 +150,7 @@
     
     #intro .tagline,
     #intro .more-info {
-        font-weight: 900;
+        font-weight: 450;
         font-size: 1.3em;
         padding: 2%;
         /*text-shadow: 0 8px 8px white;*/
@@ -159,7 +159,7 @@
     .ml16 {
         color: #402d2d;
         padding: 40px 0;
-        font-weight: 800;
+        font-weight: 700;
         font-size: 2em;
         letter-spacing: 0.5em;
         overflow: hidden;
@@ -195,7 +195,7 @@
     }
     
     .title {
-        font-weight: 900;
+        font-weight: 700;
         font-size: 2.2em;
         text-transform: uppercase;
         letter-spacing: 0.3em;
@@ -203,7 +203,7 @@
     }
     
     .detail-info .about-me {
-        font-weight: 900;
+        font-weight: 600;
         font-size: 1.3em;
     }
     /***Responsive layout****/
@@ -238,15 +238,15 @@
             margin-right: auto;
         }
         #intro .tagline {
-            font-size: 1.3em;
+            font-size: 1em;
         }
         #intro .more-info {
-            font-size: 1.2em;
+            font-size: 1em;
         }
         .profile {
-            width: 50%;
+            width: 35%;
             height: 20%;
-            margin: 10%;
+            margin-left: 20%;
         }
         p.detail-info {
             font-size: 0.8em;
@@ -255,6 +255,7 @@
         }
         .title {
             margin-right: 10%;
+            margin-bottom: 0px;
         }
     }
     
@@ -288,6 +289,16 @@
         .profile {
             width: 20%;
             height: 20%;
+            margin-left: 35%;
+        }
+        .title {
+            margin-right: 10%;
+            margin-bottom: 0px;
+        }
+        p.detail-info {
+            font-size: 1.1em;
+            width: 88vw;
+            margin: 0;
         }
     }
     /* Large screens */
@@ -339,5 +350,8 @@
         }
         main {
             margin: 0;
+        }
+        p.detail-info {
+            width: 72vw;
         }
     }
