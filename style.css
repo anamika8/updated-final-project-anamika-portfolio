@@ -169,9 +169,47 @@
         display: inline-block;
         line-height: 1em;
     }
+    
+    #about {
+        width: 100vw;
+        margin: 0.5em;
+        text-align: center;
+    }
+    
+    .profile {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 15%;
+        height: 10%;
+        border-radius: 50%;
+        border: 1px solid var(--black);
+    }
+    
+    p.detail-info {
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.2em;
+        width: 50%;
+    }
+    
+    .header {
+        font-weight: 900;
+        font-size: 2.2em;
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+        overflow: hidden;
+    }
+    
+    .detail-info .about-me {
+        font-weight: 900;
+        font-size: 1.3em;
+    }
+    /***Responsive layout****/
     /* Small screens */
     
-    @media (max-width: 414px) {
+    @media (max-width: 500px) {
         .navbar {
             bottom: 0;
             width: 100vw;
@@ -205,9 +243,22 @@
         #intro .more-info {
             font-size: 1.2em;
         }
+        .profile {
+            width: 50%;
+            height: 20%;
+            margin: 10%;
+        }
+        p.detail-info {
+            font-size: 0.8em;
+            width: 88vw;
+            margin: 0;
+        }
+        .header {
+            margin-right: 10%;
+        }
     }
     
-    @media (min-width: 415px) and (max-width: 800px) {
+    @media (min-width: 501px) and (max-width: 800px) {
         .home-container {
             background: url(img/bkp_small.jpg);
             background-repeat: no-repeat;
@@ -233,6 +284,10 @@
         }
         main {
             margin: 0;
+        }
+        .profile {
+            width: 20%;
+            height: 20%;
         }
     }
     /* Large screens */
