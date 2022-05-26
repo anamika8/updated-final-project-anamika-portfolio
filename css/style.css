@@ -169,12 +169,13 @@
         display: inline-block;
         line-height: 1em;
     }
-    
+    /*
     #about {
         width: 100vw;
         margin: 0.5em;
         text-align: center;
     }
+    */
     
     .profile {
         display: block;
@@ -299,6 +300,9 @@
             font-size: 1.1em;
             width: 88vw;
             margin: 0;
+        }
+        .detail-info .about-me {
+            margin-bottom: 0px;
         }
     }
     /* Large screens */

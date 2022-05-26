@@ -187,3 +187,11 @@ in order for the aspect ratio trick to work*/
         margin: 10%;
     }
 }
+
+@media (max-width: 800px) {
+    .document-center {
+        width: 85%;
+        height: 30vh;
+        margin: 1%;
+    }
+}

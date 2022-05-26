@@ -14,29 +14,29 @@ let inAnim = false;
 let animTime = 500;
 
 //Sort out starting position
-sortPositioning(screenStore[currentScreen], screenStore[currentScreen - 1], screenStore[currentScreen + 1]);
+arrangeScreenPositions(screenStore[currentScreen], screenStore[currentScreen - 1], screenStore[currentScreen + 1]);
 //Sort out circle styling
 highlightCircle(circleStore[0]);
 
 //User clicks on rightArrow
 rightArrow.addEventListener("click", () => {
-    startAnim("right");
+    beginAnimation("right");
 });
 
 //User clicks on the leftArrow
 leftArrow.addEventListener("click", () => {
-    startAnim("left");
+    beginAnimation("left");
 });
 
 //Start animation. Either towards left or right
-function startAnim(direction) {
+function beginAnimation(direction) {
     if (!inAnim) {
         inAnim = true;
         if (direction === "right") {
-            moveRight();
+            showRightScreen();
             highlightCircle(circleStore[currentScreen + 1], "right");
         } else if (direction === "left") {
-            moveLeft();
+            showLeftScreen();
             highlightCircle(circleStore[currentScreen - 1], "left");
         } else {
             isAnim = false;
@@ -45,8 +45,8 @@ function startAnim(direction) {
     }
 }
 
-//Move to the right
-function moveRight() {
+//Move to the right screen
+function showRightScreen() {
     //Move towards Next screen as usual
     if (currentScreen < numOfScreens - 1) {
         toLeft(screenStore[currentScreen]);
@@ -54,7 +54,7 @@ function moveRight() {
         setTimeout(() => {
             inAnim = false;
             currentScreen++;
-            sortPositioning(screenStore[currentScreen], screenStore[currentScreen - 1], screenStore[currentScreen + 1]);
+            arrangeScreenPositions(screenStore[currentScreen], screenStore[currentScreen - 1], screenStore[currentScreen + 1]);
         }, animTime)
     } else {
         //Or the screen coming in is the first screen again
@@ -63,13 +63,13 @@ function moveRight() {
         setTimeout(() => {
             inAnim = false;
             currentScreen = 0;
-            sortPositioning(screenStore[currentScreen], screenStore[currentScreen - 1], screenStore[currentScreen + 1]);
+            arrangeScreenPositions(screenStore[currentScreen], screenStore[currentScreen - 1], screenStore[currentScreen + 1]);
         }, animTime)
     }
 }
 
-//Move to the left
-function moveLeft() {
+//Move to the left screen
+function showLeftScreen() {
     //Move back to screen previously on, as usual
     if (currentScreen > 0) {
         toRight(screenStore[currentScreen]);
@@ -77,7 +77,7 @@ function moveLeft() {
         setTimeout(() => {
             inAnim = false;
             currentScreen--;
-            sortPositioning(screenStore[currentScreen], screenStore[currentScreen - 1], screenStore[currentScreen + 1]);
+            arrangeScreenPositions(screenStore[currentScreen], screenStore[currentScreen - 1], screenStore[currentScreen + 1]);
         }, animTime)
     } else {
         //Move back to the last screen container
@@ -86,7 +86,7 @@ function moveLeft() {
         setTimeout(() => {
             inAnim = false;
             currentScreen = numOfScreens - 1;
-            sortPositioning(screenStore[currentScreen], screenStore[currentScreen - 1], screenStore[currentScreen + 1]);
+            arrangeScreenPositions(screenStore[currentScreen], screenStore[currentScreen - 1], screenStore[currentScreen + 1]);
         }, animTime)
     }
 }
@@ -102,22 +102,23 @@ circleStore.forEach(circle => {
             highlightCircle(event.target);
             //Work out whether we need to move right or left, or nowhere.
             if (circleIndex > currentScreen) {
-                changeScreenCircleClick(circleIndex, "right");
+                changeScreenOnCircleClick(circleIndex, "right");
             } else if (circleIndex < currentScreen) {
-                changeScreenCircleClick(circleIndex, "left");
+                changeScreenOnCircleClick(circleIndex, "left");
             }
         }
     })
 })
 
-function changeScreenCircleClick(circleIndex, direction) {
+// function to change the screen when a specific circle is clicked
+function changeScreenOnCircleClick(circleIndex, direction) {
     inAnim = true;
     if (direction === "right") {
-        sortPositioning(screenStore[currentScreen], screenStore[currentScreen - 1], screenStore[circleIndex]);
+        arrangeScreenPositions(screenStore[currentScreen], screenStore[currentScreen - 1], screenStore[circleIndex]);
         toLeft(screenStore[currentScreen]);
         comeRight(screenStore[circleIndex]);
     } else if (direction === "left") {
-        sortPositioning(screenStore[currentScreen], screenStore[circleIndex], screenStore[currentScreen + 1]);
+        arrangeScreenPositions(screenStore[currentScreen], screenStore[circleIndex], screenStore[currentScreen + 1]);
         toRight(screenStore[currentScreen]);
         comeLeft(screenStore[circleIndex]);
     } else {
@@ -127,7 +128,7 @@ function changeScreenCircleClick(circleIndex, direction) {
     setTimeout(() => {
         inAnim = false;
         currentScreen = circleIndex;
-        sortPositioning(screenStore[currentScreen], screenStore[currentScreen - 1], screenStore[currentScreen + 1]);
+        arrangeScreenPositions(screenStore[currentScreen], screenStore[currentScreen - 1], screenStore[currentScreen + 1]);
     }, animTime)
 }
 
@@ -176,10 +177,8 @@ function comeLeft(screen) {
     }, animTime);
 }
 
-
-
-//Sort positioning. Don't want images to overlap
-function sortPositioning(mainScreen, leftScreen, rightScreen) {
+//Arrange positioning when page loads or on any user event on the carousel
+function arrangeScreenPositions(mainScreen, leftScreen, rightScreen) {
     //If right screen is undefined. We need to repeat first screen again
     if (rightScreen === undefined) {
         rightScreen = screenStore[0];
@@ -198,20 +197,23 @@ function sortPositioning(mainScreen, leftScreen, rightScreen) {
         } else if (screen === rightScreen) {
             screen.style.display = "block";
             screen.style.left = "100%";
-        } else {
-            screen.style.display = "none";
         }
-    })
+        /*else {
+                   console.log("display set to none");
+                   screen.style.display = "none";
+               }*/
+    });
 }
 
 //Auto Scroll feature
 let carousel = document.getElementById("carousel-1");
 let scrollTime = Number(carousel.getAttribute("auto-scroll"));
-//Only implement the feature if the user has included the attribute 'auto-scroll'.
+
+// if scroll-time is specified, auto scroll will be triggered
 if (scrollTime) {
     //Auto Scroll will be set up the very first time
     let autoWipe = setInterval(() => {
-        startAnim("right");
+        beginAnimation("right");
     }, scrollTime);
     //Clear the timer when they hover on carousel
     carousel.addEventListener("mouseenter", () => {
@@ -220,7 +222,7 @@ if (scrollTime) {
     //Re-initialise the timer when they hover out of the carousel
     carousel.addEventListener("mouseleave", () => {
         autoWipe = setInterval(() => {
-            startAnim("right");
+            beginAnimation("right");
         }, scrollTime);
     })
 
