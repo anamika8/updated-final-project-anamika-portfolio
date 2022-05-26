@@ -17,7 +17,7 @@
     }
     
     .home-container {
-        background: url(img/bkp_original.jpg) no-repeat center center;
+        background: url(../img/bkp_original.jpg) no-repeat center center;
         background-size: cover;
         background-position-x: right;
         color: var(--black);
@@ -261,7 +261,7 @@
     
     @media (min-width: 501px) and (max-width: 800px) {
         .home-container {
-            background: url(img/bkp_small.jpg);
+            background: url(../img/bkp_small.jpg);
             background-repeat: no-repeat;
             background-position-x: right;
             display: block;
@@ -322,7 +322,7 @@
             left: 0px;
         }
         .home-container {
-            background: url(img/bkp_original.jpg);
+            background: url(../img/bkp_original.jpg);
             background-repeat: no-repeat;
             background-position-x: right;
             background-position-y: bottom;
