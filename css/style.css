@@ -13,6 +13,7 @@
         --white: #ffffff;
         --blue: #00254d;
         --pink: #df49a6;
+        --purple: #A117F2;
         --transition-speed: 600ms;
     }
     
@@ -169,13 +170,8 @@
         display: inline-block;
         line-height: 1em;
     }
-    /*
-    #about {
-        width: 100vw;
-        margin: 0.5em;
-        text-align: center;
-    }
-    */
+    /*styles different section*/
+    /*About Me styles */
     
     .profile {
         display: block;
@@ -207,9 +203,12 @@
         font-weight: 600;
         font-size: 1.3em;
     }
+    /*footer styles*/
     
     #footer-details {
-        margin-top: auto;
+        position: absolute;
+        bottom: 0;
+        left: 40%;
         color: var(--blue);
         font-size: 1.5rem;
     }
@@ -220,10 +219,11 @@
         text-decoration: none;
     }
     
-    #footer-details a:hover {
+    #footer-details a:hover,
+    #footer-details a:focus {
         color: var(--purple);
     }
-    /***Responsive layout****/
+    /*** Responsive layout ***/
     /* Small screens */
     
     @media (max-width: 500px) {
@@ -286,6 +286,7 @@
             font-size: 1.8rem;
         }*/
     }
+    /* Medium screen */
     
     @media (min-width: 501px) and (max-width: 800px) {
         .home-container {
@@ -333,6 +334,11 @@
         }
         #project .title {
             margin-left: 15%;
+        }
+        #footer-details {
+            position: absolute;
+            bottom: 10%;
+            left: 25%;
         }
     }
     /* Large screens */
