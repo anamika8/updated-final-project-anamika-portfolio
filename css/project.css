@@ -179,3 +179,31 @@ in order for the aspect ratio trick to work*/
         left: 0;
     }
 }
+
+
+/*** Responsive layout ***/
+
+
+/* Small screens */
+
+@media (max-width: 500px) {
+    .document-center {
+        position: absolute;
+        width: 90%;
+        height: 30%;
+        margin-top: 20%;
+    }
+}
+
+
+/* Medium screen */
+
+@media (min-width: 501px)and (max-width: 800px) {
+    .document-center {
+        position: absolute;
+        width: 90%;
+        height: 55%;
+        margin-left: 3%;
+        margin-top: 1.5%;
+    }
+}
