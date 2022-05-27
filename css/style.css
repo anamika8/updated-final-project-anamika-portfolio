@@ -332,9 +332,10 @@
         .detail-info .about-me {
             margin-bottom: 0px;
         }
+        /*
         #project .title {
             margin-left: 15%;
-        }
+        }*/
         #footer-details {
             position: absolute;
             bottom: 10%;
@@ -394,7 +395,8 @@
         p.detail-info {
             width: 72vw;
         }
+        /*
         #project .title {
             margin-left: 15%;
-        }
+        }*/
     }
