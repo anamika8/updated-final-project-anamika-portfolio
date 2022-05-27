@@ -11,7 +11,7 @@
         --bg-secondary: #f5e5b8;
         --black: #080808;
         --white: #ffffff;
-        --blue: #6649b8;
+        --blue: #00254d;
         --pink: #df49a6;
         --transition-speed: 600ms;
     }
@@ -207,6 +207,22 @@
         font-weight: 600;
         font-size: 1.3em;
     }
+    
+    #footer-details {
+        margin-top: auto;
+        color: var(--blue);
+        font-size: 1.5rem;
+    }
+    
+    #footer-details a {
+        color: var(--black);
+        font-size: 3rem;
+        text-decoration: none;
+    }
+    
+    #footer-details a:hover {
+        color: var(--purple);
+    }
     /***Responsive layout****/
     /* Small screens */
     
@@ -258,6 +274,17 @@
             margin-right: 10%;
             margin-bottom: 0px;
         }
+        #footer-details {
+            display: none;
+        }
+        /*
+        #footer-details {
+            font-size: 1.2rem;
+            margin-left: -40%;
+        }
+        #footer-details a {
+            font-size: 1.8rem;
+        }*/
     }
     
     @media (min-width: 501px) and (max-width: 800px) {
