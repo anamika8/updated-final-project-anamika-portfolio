@@ -51,13 +51,6 @@
                         <span class="link-text">Work</span>
                     </a>
                 </li>
-                <!--
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="fa-solid fa-file-code fa-sm fa-lg fa-xl"></i>
-                        <span class="link-text">Resume</span>
-                    </a>
-                </li>-->
                 <li class="nav-item">
                     <a href="#" class="nav-link" onclick="switchSection('contact')">
                         <i class="fa-solid fa-envelope fa-sm fa-lg fa-xl"></i>
@@ -140,23 +133,26 @@
 
             <section id="contact" style="display: none;">
                 <h1 class="title">Contact</h1>
-                <form action="/form" class="form"></form>
-                <h2 class="view-pg-title"> Feel free to connect mee <i class="fa fa-smile-o" aria-hidden="true"></i></h2>
-                <form action="/form" class="form"></form>
-                <div>
-                    <label for="name" class="form-label" style="display: none;">Name:</label>
-                    <input type="text" id="name" class="form-element" name="name" placeholder="your name here" />
+                <div class="form-group">
+                    <div class="form-element">
+                        <label class="form-label" for="name">Name</label>
+                        <input class="form-input" id="name" type="text" name="name" placeholder="your name here" required />
+                    </div>
+
+                    <div class="form-element">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-input" id="email" type="email" name="email" placeholder="email@domain.com" required />
+                    </div>
                 </div>
-                <div>
-                    <label for="email" class="form-label" style="display: none;">Email:</label>
-                    <input type="email" class="form-element" id="email" name="email" placeholder="example@email.com" />
+
+                <div class="form-element">
+                    <label class="form-label" for="message">Message</label>
+                    <textarea class="form-input form-textbox" id="message" name="message" placeholder="enter your message" required></textarea>
                 </div>
-                <div>
-                    <label for="ck-editor" class="form-label" style="display: none;">Message:</label>
-                    <textarea name="content" id="ck-editor" placeholder="enter your message"></textarea>
-                </div>
-                <div>
-                    <button type="submit" name="submit">Submit</button>
+
+                <div class="form-buttons">
+                    <button class="form-btn" type="submit" value="Submit">Submit</button>
+                    <button class="form-btn" type="reset" value="Reset">Reset</button>
                 </div>
                 </form>
             </section>
