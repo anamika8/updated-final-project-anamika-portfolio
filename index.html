@@ -12,6 +12,7 @@
     <script src="https://kit.fontawesome.com/f3e97902d7.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <link rel="stylesheet" href="css/project.css" />
+    <link rel="stylesheet" href="css/contact.css" />
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -138,8 +139,26 @@
             </section>
 
             <section id="contact" style="display: none;">
-                <h1>Contact</h1>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo error quidem, fuga neque dignissimos amet molestiae quae sunt, quos deleniti architecto, minus totam doloremque eaque omnis voluptates suscipit eos! Quibusdam?</p>
+                <h1 class="title">Contact</h1>
+                <form action="/form" class="form"></form>
+                <h2 class="view-pg-title"> Feel free to connect mee <i class="fa fa-smile-o" aria-hidden="true"></i></h2>
+                <form action="/form" class="form"></form>
+                <div>
+                    <label for="name" class="form-label" style="display: none;">Name:</label>
+                    <input type="text" id="name" class="form-element" name="name" placeholder="your name here" />
+                </div>
+                <div>
+                    <label for="email" class="form-label" style="display: none;">Email:</label>
+                    <input type="email" class="form-element" id="email" name="email" placeholder="example@email.com" />
+                </div>
+                <div>
+                    <label for="ck-editor" class="form-label" style="display: none;">Message:</label>
+                    <textarea name="content" id="ck-editor" placeholder="enter your message"></textarea>
+                </div>
+                <div>
+                    <button type="submit" name="submit">Submit</button>
+                </div>
+                </form>
             </section>
         </main>
         <footer class="footer" id="footer-details">
