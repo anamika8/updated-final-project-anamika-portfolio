@@ -201,7 +201,7 @@
 
 /* Large screen */
 
-@media (min-width: 801px) {
+@media (min-width: 801px) and (max-width:1499px) {
     .document-center {
         position: absolute;
         width: 80%;
@@ -210,5 +210,21 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .carousel-container {
+        max-width: 980px;
+        width: 70%;
+    }
+}
+
+
+/* Extra Larger screen */
+
+@media (min-width: 1500px) {
+    .carousel-container {
+        max-width: 836px;
+        width: 70%;
+        margin-top: 2%;
+        margin-left: 26%;
     }
 }
