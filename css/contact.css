@@ -66,3 +66,12 @@
 .form-btn:focus {
     background-color: var(--purple);
 }
+
+
+/* Small screens */
+
+@media (max-width: 500px) {
+    .form-input {
+        width: 79%;
+    }
+}
