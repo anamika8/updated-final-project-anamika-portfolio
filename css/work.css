@@ -1,0 +1,117 @@
+/* Accordion */
+
+.accordion {
+    max-width: 70%;
+    margin-left: 15%;
+}
+
+.tab {
+    align-items: flex-start;
+    position: relative;
+}
+
+.tab-heading {
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--blue);
+    cursor: pointer;
+    height: 6rem;
+    background-color: transparent;
+    border-bottom: 2px solid var(--black);
+    padding-top: 2%;
+}
+
+.tab-heading h2 {
+    pointer-events: none;
+}
+
+.start-left {
+    text-align: left;
+    padding-left: 5%;
+}
+
+.start-right {
+    text-align: right;
+    padding-right: 5%;
+}
+
+.tab-content {
+    background-color: transparent;
+    color: var(--purple);
+    overflow-y: hidden;
+    height: 0;
+    transition: 0.5s ease;
+    font-size: 1.5em;
+    font-weight: 500;
+    padding-top: 1%;
+}
+
+.tab-content p {
+    margin: 20px;
+}
+
+.tab-heading .heavy {
+    font-weight: 700;
+    padding-right: 5%;
+}
+
+
+/*** Responsive layout ***/
+
+
+/* Small screens */
+
+@media (max-width: 500px) {
+    .accordion {
+        max-width: 90%;
+        margin-left: 5%;
+    }
+    .tab-heading {
+        border-radius: 3px;
+        font-size: 0.8em;
+        height: 5rem;
+        padding-bottom: 2%;
+    }
+    .tab-content p {
+        font-size: 0.4em;
+        border-bottom: 1px dotted var(--black);
+    }
+}
+
+
+/* Medium screen */
+
+@media (min-width: 501px)and (max-width: 800px) {
+    .tab-heading {
+        font-size: 1em;
+        height: 5rem;
+        padding-top: 5%;
+    }
+    .tab-content p {
+        font-size: 0.5em;
+    }
+}
+
+
+/* Large screen */
+
+@media (min-width: 801px) and (max-width: 1200px) {
+    .accordion {
+        max-width: 80%;
+        margin-left: 15%;
+    }
+    .tab-heading {
+        font-size: 1.2em;
+        height: 5rem;
+    }
+    .tab-content {
+        font-size: 1em;
+        padding-bottom: 1%;
+    }
+    .tab-content p {
+        margin: 1px;
+        font-size: 1.2rem;
+    }
+}
