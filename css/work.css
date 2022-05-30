@@ -95,6 +95,9 @@
         border-bottom: 1px dotted var(--black);
         margin: 3px;
     }
+    .tab-heading .arrow {
+        font-size: 15px;
+    }
 }
 
 
@@ -109,6 +112,9 @@
     .tab-content p {
         font-size: 0.8em;
         margin: 8px;
+    }
+    .tab-heading .arrow {
+        font-size: 18px;
     }
 }
 
@@ -132,5 +138,8 @@
         margin: 1px;
         font-size: 1.2rem;
         max-width: 91%;
+    }
+    .tab-heading .arrow {
+        font-size: 24px;
     }
 }
