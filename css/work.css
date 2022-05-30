@@ -57,6 +57,22 @@
     padding-right: 5%;
 }
 
+.tab-heading .arrow {
+    color: var(--blue);
+    font-size: 30px;
+    transform: rotate(-90deg);
+    align-items: baseline;
+}
+
+.tab-heading:hover .arrow {
+    color: var(--purple);
+}
+
+.tab-heading .arrow-animate {
+    transform: rotate(0deg);
+    opacity: 1;
+}
+
 
 /*** Responsive layout ***/
 
