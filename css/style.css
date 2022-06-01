@@ -155,7 +155,6 @@
         font-weight: 450;
         font-size: 1.3em;
         padding: 2%;
-        /*text-shadow: 0 8px 8px white;*/
     }
     
     .ml16 {
@@ -278,14 +277,6 @@
         #footer-details {
             display: none;
         }
-        /*
-        #footer-details {
-            font-size: 1.2rem;
-            margin-left: -40%;
-        }
-        #footer-details a {
-            font-size: 1.8rem;
-        }*/
     }
     /* Medium screen */
     

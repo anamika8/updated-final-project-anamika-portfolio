@@ -34,7 +34,6 @@
 }
 
 .form-input:focus::placeholder {
-    /*color: transparent;*/
     background-color: transparent;
 }
 
