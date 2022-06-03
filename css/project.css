@@ -191,7 +191,7 @@ in order for the aspect ratio trick to work*/
 @media (max-width: 500px) {
     .document-center {
         position: absolute;
-        width: 90%;
+        width: 80%;
         height: 30%;
         margin-top: 20%;
     }
@@ -206,7 +206,7 @@ in order for the aspect ratio trick to work*/
         width: 90%;
         height: 55%;
         margin-left: 3%;
-        margin-top: 1.5%;
+        margin-top: 4.5%;
     }
 }
 
