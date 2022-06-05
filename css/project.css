@@ -230,3 +230,18 @@ in order for the aspect ratio trick to work*/
         width: 70%;
     }
 }
+
+
+/* Extra Larger screen */
+
+@media (min-width: 1500px) {
+    .carousel-container {
+        max-width: 836px;
+        width: 70%;
+        margin-top: 2%;
+        margin-left: 26%;
+    }
+    .document-center {
+        margin-left: -14%;
+    }
+}
