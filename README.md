@@ -17,3 +17,9 @@ The following outside tutorials were referred to during the creation of this por
 3. Project Carousel Container: https://css-tricks.com/css-only-carousel/
 
 4. Work Experience Accordion: https://codepen.io/ziadice06/pen/oNvLymv
+
+## Special Features
+
+- The animation of the carousel in the Projects page will stop when the user hovers their mouse over the image. The animation resumes once the mouse cursor leaves the container.
+
+- In the 'Work' section, the details of the Job duties are shown at the bottom of the respective entry when clicked. The details collapses when that entry is clicked again.
