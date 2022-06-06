@@ -1,3 +1,5 @@
+/* Styles for contact section */
+
 .form-group {
     display: flex;
     flex-flow: column nowrap;
@@ -65,6 +67,9 @@
 .form-btn:focus {
     background-color: var(--purple);
 }
+
+
+/*** Responsive layout ***/
 
 
 /* Small screens */

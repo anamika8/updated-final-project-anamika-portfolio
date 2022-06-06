@@ -11,11 +11,12 @@ let animTime = 500;
 arrangeScreenPositions(screenStore[currentScreen], screenStore[currentScreen - 1], screenStore[currentScreen + 1]);
 highlightCircle(circleStore[0]);
 
-
+// registering the right arrow for carousel screen movement
 rightArrow.addEventListener("click", () => {
     beginAnimation("right");
 });
 
+// registering the left arrow for carousel screen movement
 leftArrow.addEventListener("click", () => {
     beginAnimation("left");
 });
@@ -117,6 +118,7 @@ function changeScreenOnCircleClick(circleIndex, direction) {
     }, animTime)
 }
 
+// Function to highlight the circle when carousel screen moves
 function highlightCircle(circleSelect, direction) {
     if (circleSelect === undefined && direction === "right") {
         circleSelect = circleStore[0];

@@ -5,6 +5,7 @@ textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='let
 // Get all sections
 var allSections = document.querySelectorAll("section");
 
+// Animates the sub-heading text in the Home Page
 anime.timeline({ loop: true })
     .add({
         targets: '.ml16 .letter',

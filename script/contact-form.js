@@ -2,6 +2,7 @@ let form = document.querySelector('form');
 
 form.addEventListener('submit', handleSubmit);
 
+// Function to print user input in the form via console log
 function handleSubmit(event) {
     event.preventDefault();
     //reading the entered value of all elements

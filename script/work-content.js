@@ -16,6 +16,11 @@ const openTab = tab => {
     }
 };
 
+/**
+ * Closes any other open tabs other than the one clicked
+ * @param {*} tabs 
+ * @param {*} openTab 
+ */
 const closeOthersTabs = (tabs, openTab) => {
     tabs.forEach(tab => {
         if (tab !== openTab) {
@@ -32,6 +37,7 @@ const closeOthersTabs = (tabs, openTab) => {
     });
 };
 
+// registers click event listener on all tabs
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
         openTab(tab);
