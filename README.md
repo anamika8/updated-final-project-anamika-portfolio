@@ -1,6 +1,6 @@
 # Anamika's Portfolio
 
-Live-link : https://anamika8.github.io/anamika-portfolio/
+Live-link : https://anamika8.github.io/updated-final-project-anamika-portfolio/
 
 ## Summary
 
