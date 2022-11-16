@@ -50,8 +50,7 @@
         margin-left: 5rem;
         padding: 1rem;
     }
-    
-    .navbar {
+    /*   .navbar {
         position: fixed;
         background-color: var(--bg-primary);
         transition: width 600ms ease;
@@ -136,6 +135,15 @@
     
     .fa-solid {
         transition: var(--transition-speed);
+    }
+    */
+    
+    .fa-solid {
+        color: var(--pink);
+    }
+    
+    .fa-solid:hover {
+        color: var(--purple);
     }
     
     .navbar:hover .logo .fa-solid {
@@ -227,7 +235,7 @@
     /* Small screens */
     
     @media (max-width: 500px) {
-        .navbar {
+        /*  .navbar {
             bottom: 0;
             width: 100vw;
             height: 5rem;
@@ -241,7 +249,7 @@
         }
         .nav-link {
             justify-content: center;
-        }
+        }*/
         #intro .name {
             font-size: 2.2em;
         }
@@ -289,7 +297,7 @@
             background-size: cover;
             justify-content: center;
         }
-        .navbar {
+        /*.navbar {
             bottom: 0;
             width: 100vw;
             height: 5rem;
@@ -303,7 +311,7 @@
         }
         .nav-link {
             justify-content: center;
-        }
+        }*/
         main {
             margin: 0;
         }
@@ -336,7 +344,7 @@
     /* Large screens */
     
     @media (min-width: 800px) {
-        .navbar {
+        /* .navbar {
             top: 0;
             width: 5rem;
             height: 100vh;
@@ -352,7 +360,7 @@
         }
         .navbar:hover .logo-text {
             left: 0px;
-        }
+        }*/
         .home-container {
             background: url(../img/bkp_original.jpg);
             background-repeat: no-repeat;
