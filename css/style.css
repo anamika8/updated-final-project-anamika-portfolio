@@ -50,93 +50,6 @@
         margin-left: 5rem;
         padding: 1rem;
     }
-    /*   .navbar {
-        position: fixed;
-        background-color: var(--bg-primary);
-        transition: width 600ms ease;
-        overflow: scroll;
-        list-style: none;
-        z-index: 100;
-    }
-    
-    .navbar-nav {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 45%;
-    }
-    
-    .nav-item {
-        width: 100%;
-    }
-    
-    .nav-item:last-child {
-        margin-top: auto;
-    }
-    
-    .nav-link {
-        display: flex;
-        align-items: center;
-        height: 5rem;
-        color: var(--text-primary);
-        text-decoration: none;
-        filter: grayscale(100%) opacity(0.7);
-        transition: var(--transition-speed);
-    }
-    
-    .nav-link:hover {
-        filter: grayscale(0%) opacity(1);
-        background: var(--bg-secondary);
-        color: var(--text-secondary);
-    }
-    
-    .link-text {
-        display: none;
-        margin-left: 1rem;
-        font-size: 1.5rem;
-    }
-    
-    .nav-link .fa-solid {
-        width: 2rem;
-        min-width: 2rem;
-        margin: 0 1.5rem;
-    }
-    
-    .logo {
-        font-weight: bold;
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-        text-align: center;
-        color: var(--text-secondary);
-        background: var(--bg-secondary);
-        font-size: 1.5rem;
-        letter-spacing: 0.3ch;
-        width: 100%;
-    }
-    
-    .logo .fa-solid {
-        transform: rotate(0deg);
-        transition: var(--transition-speed);
-    }
-    
-    .logo-text {
-        display: inline;
-        position: absolute;
-        left: -999px;
-        transition: var(--transition-speed);
-    }
-    
-    .fa-solid {
-        color: var(--pink);
-    }
-    
-    .fa-solid {
-        transition: var(--transition-speed);
-    }
-    */
     
     .fa-solid {
         color: var(--pink);
@@ -235,23 +148,12 @@
     /* Small screens */
     
     @media (max-width: 500px) {
-        /*  .navbar {
-            bottom: 0;
-            width: 100vw;
-            height: 5rem;
-        }
-        .logo {
+        .nav-item .link-text {
             display: none;
         }
-        .navbar-nav {
-            flex-direction: row;
-            height: 100%;
-        }
-        .nav-link {
-            justify-content: center;
-        }*/
         #intro .name {
-            font-size: 2.2em;
+            margin-top: 50%;
+            font-size: 1.5em;
         }
         main {
             margin-left: 5%;
@@ -289,6 +191,13 @@
     /* Medium screen */
     
     @media (min-width: 501px) and (max-width: 800px) {
+        #intro .name {
+            margin-top: 10%;
+            font-size: 2em;
+        }
+        .nav-item .link-text {
+            display: none;
+        }
         .home-container {
             background: url(../img/bkp_small.jpg);
             background-repeat: no-repeat;
@@ -297,21 +206,6 @@
             background-size: cover;
             justify-content: center;
         }
-        /*.navbar {
-            bottom: 0;
-            width: 100vw;
-            height: 5rem;
-        }
-        .logo {
-            display: none;
-        }
-        .navbar-nav {
-            flex-direction: row;
-            height: 100%;
-        }
-        .nav-link {
-            justify-content: center;
-        }*/
         main {
             margin: 0;
         }
@@ -344,23 +238,6 @@
     /* Large screens */
     
     @media (min-width: 800px) {
-        /* .navbar {
-            top: 0;
-            width: 5rem;
-            height: 100vh;
-        }
-        .navbar:hover {
-            width: 16rem;
-        }
-        .navbar:hover .link-text {
-            display: inline;
-        }
-        .navbar:hover .logo .fa-solid {
-            margin-left: 11rem;
-        }
-        .navbar:hover .logo-text {
-            left: 0px;
-        }*/
         .home-container {
             background: url(../img/bkp_original.jpg);
             background-repeat: no-repeat;
