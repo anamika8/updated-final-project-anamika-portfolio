@@ -1,274 +1,302 @@
-    * {
-        box-sizing: border-box;
+* {
+    box-sizing: border-box;
+}
+
+ :root {
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    font-size: 16px;
+    --text-primary: #576e75;
+    --text-secondary: #35535c;
+    --bg-primary: #fdf6e3;
+    --bg-secondary: #f5e5b8;
+    --black: #080808;
+    --white: #ffffff;
+    --blue: #00254d;
+    --pink: #df49a6;
+    --purple: #A117F2;
+    --light-green: #0CB863;
+    --transition-speed: 600ms;
+}
+
+.home-container {
+    background: url(../img/bkp_original.jpg) no-repeat center center;
+    background-size: cover;
+    background-position-x: right;
+    color: var(--black);
+    height: 100vh;
+}
+
+body {
+    color: var(--black);
+    background-color: var(--white);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--black);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--blue);
+}
+
+main {
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+.fa-solid {
+    color: var(--pink);
+}
+
+.fa-solid:hover {
+    color: var(--purple);
+}
+
+.navbar:hover .logo .fa-solid {
+    transform: rotate(-180deg);
+}
+
+#intro .name {
+    font-weight: 700;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    overflow: hidden;
+}
+
+#intro .tagline,
+#intro .more-info {
+    font-weight: 450;
+    font-size: 1.3em;
+    padding: 2%;
+}
+
+.ml16 {
+    color: #402d2d;
+    padding: 40px 0;
+    font-weight: 700;
+    font-size: 2em;
+    letter-spacing: 0.5em;
+    overflow: hidden;
+}
+
+.ml16 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+
+/*styles different section*/
+
+
+/*About Me styles */
+
+.profile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+    border: 1px solid var(--black);
+}
+
+p.detail-info {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2em;
+    width: 50%;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    overflow: hidden;
+}
+
+.detail-info .about-me {
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+
+/*footer styles*/
+
+#footer-details {
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    color: var(--blue);
+    font-size: 1.5rem;
+}
+
+#footer-details a {
+    color: var(--black);
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+#footer-details a:hover,
+#footer-details a:focus {
+    color: var(--purple);
+}
+
+
+/*** Responsive layout ***/
+
+
+/* Small screens */
+
+@media (max-width: 500px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
     }
-    
-     :root {
-        font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-        font-size: 16px;
-        --text-primary: #576e75;
-        --text-secondary: #35535c;
-        --bg-primary: #fdf6e3;
-        --bg-secondary: #f5e5b8;
-        --black: #080808;
-        --white: #ffffff;
-        --blue: #00254d;
-        --pink: #df49a6;
-        --purple: #A117F2;
-        --light-green: #0CB863;
-        --transition-speed: 600ms;
+    .nav-item .link-text {
+        display: none;
     }
-    
-    .home-container {
-        background: url(../img/bkp_original.jpg) no-repeat center center;
-        background-size: cover;
-        background-position-x: right;
-        color: var(--black);
-        height: 100vh;
-    }
-    
-    body {
-        color: var(--black);
-        background-color: var(--white);
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
-    
-    body::-webkit-scrollbar {
-        width: 0.25rem;
-    }
-    
-    body::-webkit-scrollbar-track {
-        background: var(--black);
-    }
-    
-    body::-webkit-scrollbar-thumb {
-        background: var(--blue);
-    }
-    
-    main {
-        margin-left: 5rem;
-        padding: 1rem;
-    }
-    
-    .fa-solid {
-        color: var(--pink);
-    }
-    
-    .fa-solid:hover {
-        color: var(--purple);
-    }
-    
-    .navbar:hover .logo .fa-solid {
-        transform: rotate(-180deg);
-    }
-    
     #intro .name {
-        font-weight: 700;
-        font-size: 2.5em;
-        text-transform: uppercase;
-        letter-spacing: 0.5em;
-        overflow: hidden;
+        margin-top: 50%;
+        font-size: 1.5em;
     }
-    
-    #intro .tagline,
-    #intro .more-info {
-        font-weight: 450;
-        font-size: 1.3em;
-        padding: 2%;
+    main {
+        margin-left: 5%;
     }
-    
     .ml16 {
-        color: #402d2d;
-        padding: 40px 0;
-        font-weight: 700;
-        font-size: 2em;
-        letter-spacing: 0.5em;
-        overflow: hidden;
-    }
-    
-    .ml16 .letter {
-        display: inline-block;
-        line-height: 1em;
-    }
-    /*styles different section*/
-    /*About Me styles */
-    
-    .profile {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 15%;
-        height: 10%;
-        border-radius: 50%;
-        border: 1px solid var(--black);
-    }
-    
-    p.detail-info {
-        text-align: left;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 1.2em;
-        width: 50%;
-    }
-    
-    .title {
-        font-weight: 700;
-        font-size: 2.2em;
-        text-transform: uppercase;
-        letter-spacing: 0.3em;
-        overflow: hidden;
-    }
-    
-    .detail-info .about-me {
-        font-weight: 600;
         font-size: 1.3em;
+        font-weight: bold;
+        margin-left: auto;
+        margin-right: auto;
     }
-    /*footer styles*/
-    
+    #intro .tagline {
+        font-size: 1em;
+    }
+    #intro .more-info {
+        font-size: 1em;
+    }
+    .profile {
+        width: 35%;
+        height: 20%;
+        margin-left: 20%;
+    }
+    p.detail-info {
+        font-size: 0.8em;
+        width: 88vw;
+        margin: 0;
+    }
+    .title {
+        margin-right: 10%;
+        margin-bottom: 0px;
+    }
+    #footer-details {
+        display: none;
+    }
+}
+
+
+/* Medium screen */
+
+@media (min-width: 501px) and (max-width: 800px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    #intro .name {
+        margin-top: 10%;
+        font-size: 2em;
+    }
+    .nav-item .link-text {
+        display: none;
+    }
+    .home-container {
+        background: url(../img/bkp_small.jpg);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        display: block;
+        background-size: cover;
+        justify-content: center;
+    }
+    main {
+        margin: 0;
+    }
+    .profile {
+        width: 20%;
+        height: 20%;
+        margin-left: 35%;
+    }
+    .title {
+        margin-right: 10%;
+        margin-bottom: 0px;
+    }
+    p.detail-info {
+        font-size: 1.1em;
+        width: 88vw;
+        margin: 0;
+    }
+    .detail-info .about-me {
+        margin-bottom: 0px;
+    }
+    #project .title {
+        margin-left: 15%;
+    }
     #footer-details {
         position: absolute;
-        bottom: 0;
-        left: 40%;
-        color: var(--blue);
-        font-size: 1.5rem;
+        bottom: 10%;
+        left: 25%;
     }
-    
-    #footer-details a {
-        color: var(--black);
-        font-size: 3rem;
-        text-decoration: none;
+}
+
+
+/* Large screens */
+
+@media (min-width: 800px) {
+    .home-container {
+        background: url(../img/bkp_original.jpg);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: bottom;
+        background-size: cover;
     }
-    
-    #footer-details a:hover,
-    #footer-details a:focus {
-        color: var(--purple);
+    #intro .name {
+        margin-top: 2em;
+        position: relative;
+        left: 5%;
     }
-    /*** Responsive layout ***/
-    /* Small screens */
-    
-    @media (max-width: 500px) {
-        .nav-item .link-text {
-            display: none;
-        }
-        #intro .name {
-            margin-top: 50%;
-            font-size: 1.5em;
-        }
-        main {
-            margin-left: 5%;
-        }
-        .ml16 {
-            font-size: 1.3em;
-            font-weight: bold;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #intro .tagline {
-            font-size: 1em;
-        }
-        #intro .more-info {
-            font-size: 1em;
-        }
-        .profile {
-            width: 35%;
-            height: 20%;
-            margin-left: 20%;
-        }
-        p.detail-info {
-            font-size: 0.8em;
-            width: 88vw;
-            margin: 0;
-        }
-        .title {
-            margin-right: 10%;
-            margin-bottom: 0px;
-        }
-        #footer-details {
-            display: none;
-        }
+    #intro h2 {
+        position: relative;
+        left: 5%;
     }
-    /* Medium screen */
-    
-    @media (min-width: 501px) and (max-width: 800px) {
-        #intro .name {
-            margin-top: 10%;
-            font-size: 2em;
-        }
-        .nav-item .link-text {
-            display: none;
-        }
-        .home-container {
-            background: url(../img/bkp_small.jpg);
-            background-repeat: no-repeat;
-            background-position-x: right;
-            display: block;
-            background-size: cover;
-            justify-content: center;
-        }
-        main {
-            margin: 0;
-        }
-        .profile {
-            width: 20%;
-            height: 20%;
-            margin-left: 35%;
-        }
-        .title {
-            margin-right: 10%;
-            margin-bottom: 0px;
-        }
-        p.detail-info {
-            font-size: 1.1em;
-            width: 88vw;
-            margin: 0;
-        }
-        .detail-info .about-me {
-            margin-bottom: 0px;
-        }
-        #project .title {
-            margin-left: 15%;
-        }
-        #footer-details {
-            position: absolute;
-            bottom: 10%;
-            left: 25%;
-        }
+    #intro .tagline {
+        position: relative;
+        max-width: 90vw;
+        left: 7%;
+        font-size: 1.4em;
     }
-    /* Large screens */
-    
-    @media (min-width: 800px) {
-        .home-container {
-            background: url(../img/bkp_original.jpg);
-            background-repeat: no-repeat;
-            background-position-x: right;
-            background-position-y: bottom;
-            background-size: cover;
-        }
-        #intro .name {
-            margin-top: 2em;
-            position: relative;
-            left: 5%;
-        }
-        #intro h2 {
-            position: relative;
-            left: 5%;
-        }
-        #intro .tagline {
-            position: relative;
-            max-width: 90vw;
-            left: 7%;
-            font-size: 1.4em;
-        }
-        #intro .more-info {
-            position: relative;
-            left: 5%;
-            font-size: 1.4em;
-        }
-        main {
-            margin: 0;
-        }
-        p.detail-info {
-            width: 72vw;
-        }
+    #intro .more-info {
+        position: relative;
+        left: 5%;
+        font-size: 1.4em;
     }
+    main {
+        margin: 0;
+    }
+    p.detail-info {
+        width: 72vw;
+    }
+}
