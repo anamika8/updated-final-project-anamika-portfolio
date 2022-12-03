@@ -204,6 +204,12 @@ p.detail-info {
     #footer-details {
         display: none;
     }
+    #about {
+        margin-top: 12%;
+    }
+    #about .title {
+        font-size: 1.8em;
+    }
 }
 
 
@@ -248,6 +254,7 @@ p.detail-info {
         font-size: 1.1em;
         width: 88vw;
         margin: 0;
+        text-align: justify;
     }
     .detail-info .about-me {
         margin-bottom: 0px;
@@ -259,6 +266,9 @@ p.detail-info {
         position: absolute;
         bottom: 10%;
         left: 25%;
+    }
+    #about {
+        margin-top: 12%;
     }
 }
 
