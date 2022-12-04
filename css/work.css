@@ -60,7 +60,7 @@
 .tab-heading .arrow {
     color: var(--blue);
     font-size: 30px;
-    transform: rotate(-90deg);
+    transform: rotate(-90deg)!important;
     align-items: baseline;
 }
 
@@ -83,6 +83,7 @@
     .accordion {
         max-width: 90%;
         margin-left: 5%;
+        margin-top: 10%;
     }
     .tab-heading {
         border-radius: 3px;
@@ -97,6 +98,9 @@
     }
     .tab-heading .arrow {
         font-size: 15px;
+    }
+    #work {
+        margin-top: 18%;
     }
 }
 
@@ -116,6 +120,12 @@
     .tab-heading .arrow {
         font-size: 18px;
     }
+    #work {
+        margin-top: 12%;
+    }
+    .accordion {
+        margin-top: 5%;
+    }
 }
 
 
@@ -125,6 +135,7 @@
     .accordion {
         max-width: 80%;
         margin-left: 15%;
+        margin-top: 4%;
     }
     .tab-heading {
         font-size: 1.2em;
