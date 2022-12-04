@@ -3,6 +3,7 @@
 .accordion {
     max-width: 70%;
     margin-left: 15%;
+    margin-top: 2%;
 }
 
 .tab {
@@ -125,6 +126,9 @@
     }
     .accordion {
         margin-top: 5%;
+    }
+    #work .title {
+        margin-right: 2%;
     }
 }
 

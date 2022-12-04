@@ -1,5 +1,9 @@
 /* Styles for contact section */
 
+form {
+    margin-top: 3%;
+}
+
 .form-group {
     display: flex;
     flex-flow: column nowrap;
@@ -80,5 +84,20 @@
     }
     .form-btn {
         width: 32%;
+    }
+    #contact {
+        margin-top: 20%;
+    }
+}
+
+
+/* Medium screen */
+
+@media (min-width: 501px)and (max-width: 800px) {
+    #contact {
+        margin-top: 12%;
+    }
+    #contact .title {
+        margin-right: 4%;
     }
 }
