@@ -12,9 +12,9 @@ The following outside tutorials were referred to during the creation of this por
 
 1. Text Animation in Home Page: https://tobiasahlin.com/moving-letters/
 
-2. Side Navigation Bar: https://www.w3schools.com/howto/howto_js_sidenav.asp
+2. Navigation Bar: https://getbootstrap.com/docs/4.0/components/navbar/
 
-3. Project Carousel Container: https://css-tricks.com/css-only-carousel/
+3. Project Carousel Container: https://getbootstrap.com/docs/4.0/components/carousel/
 
 4. Work Experience Accordion: https://codepen.io/ziadice06/pen/oNvLymv
 
