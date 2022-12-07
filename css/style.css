@@ -182,10 +182,10 @@ p.detail-info {
         margin-right: auto;
     }
     #intro .tagline {
-        font-size: 1em;
+        font-size: 1.2em;
     }
     #intro .more-info {
-        font-size: 1em;
+        font-size: 1em !important;
     }
     .profile {
         width: 35%;
@@ -193,7 +193,7 @@ p.detail-info {
         margin-left: 20%;
     }
     p.detail-info {
-        font-size: 0.8em;
+        font-size: 1em;
         width: 88vw;
         margin: 0;
     }
